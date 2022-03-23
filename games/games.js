@@ -100,8 +100,9 @@ function displayCurrentGameEl() {
     // clear out the current game div
     currentGameEl.textContent = '';
     // change the label to show team one's name;
+    teamOneLabel.textContent = name1;
     // change the label to show team two's name;
-
+    teamTwoLabel.textContent = name2;
     // call the render game function to create a game element
     renderGame();
     // append the element to the cleared out current game div
