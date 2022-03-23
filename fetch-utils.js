@@ -35,6 +35,7 @@ export async function getGames() {
         .from('games')
         .select()
         .match({ user_id: client.auth.user().id, });
+        
     return checkError(response);    
 }
 
