@@ -103,19 +103,27 @@ function displayCurrentGameEl() {
     teamOneLabel.textContent = name1;
     // change the label to show team two's name;
     teamTwoLabel.textContent = name2;
-    // call the render game function to create a game element
-    renderGame();
-    // append the element to the cleared out current game div
 
+    const newGame = {
+        name1: name1,
+        name2: name2,
+        score1: score1,
+        score2: score2,
+    };
+
+    // call the render game function to create a game element
+    const gameEl = renderGame(newGame);
+    // append the element to the cleared out current game div
+    currentGameEl.append(gameEl);
 }
 
 
 function displayAllGames() {
     // clear out the past games list in the DOM
-    
+    pastGamesEl.textContent = '';
     // FETCH ALL GAMES from supabase
 
-    // loop through the past games 
+    // loop through the past games
     // render and append a past game for each past game in state
 }
 
