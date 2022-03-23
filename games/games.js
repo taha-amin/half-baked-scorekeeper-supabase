@@ -42,26 +42,26 @@ nameForm.addEventListener('submit', (e) => {
 
 teamOneAddButton.addEventListener('click', () => {
     // increment the current state for team one's score
-    
-    displayCurrentGameEl()
+    score1++;
+    displayCurrentGameEl();
 });
 
 teamTwoAddButton.addEventListener('click', () => {
     // increment the current state for team two's score
-
-    displayCurrentGameEl()
+    score2++;
+    displayCurrentGameEl();
 });
 
 teamOneSubtractButton.addEventListener('click', () => {
     // decrement the current state for team one's score
-
-    displayCurrentGameEl()
+    score1--;
+    displayCurrentGameEl();
 });
 
 teamTwoSubtractButton.addEventListener('click', () => {
     // decrement the current state for team two's score
-
-    displayCurrentGameEl()
+    score2--;
+    displayCurrentGameEl();
 });
 
 finishGameButton.addEventListener('click', async() => {
@@ -90,13 +90,14 @@ window.addEventListener('', async() => {
 
 function displayCurrentGameEl() {
     // clear out the current game div
-
+    currentGameEl.textContent = '';
     // change the label to show team one's name;
     // change the label to show team two's name;
 
     // call the render game function to create a game element
-    
+    renderGame();
     // append the element to the cleared out current game div
+
 }
 
 
