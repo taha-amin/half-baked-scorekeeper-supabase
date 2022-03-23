@@ -35,7 +35,7 @@ nameForm.addEventListener('submit', (e) => {
     
     // reset the form values
     nameForm.reset();
-    
+
     displayCurrentGameEl();
 });
 
@@ -84,6 +84,7 @@ logoutButton.addEventListener('click', () => {
  // on load . . .
 window.addEventListener('', async() => {
     // display all past games (hint: call displayAllGames())
+    await displayAllGames();
 });
 
 
