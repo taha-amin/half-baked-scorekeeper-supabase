@@ -118,13 +118,20 @@ function displayCurrentGameEl() {
 }
 
 
-function displayAllGames() {
+async function displayAllGames() {
     // clear out the past games list in the DOM
     pastGamesEl.textContent = '';
+    
     // FETCH ALL GAMES from supabase
+    const games = await getGames();
 
     // loop through the past games
     // render and append a past game for each past game in state
+    for (let game of games) {
+        const gameEl = renderGame(game);
+
+        pastGamesEl.append(gameEl);
+    }
 }
 
 
