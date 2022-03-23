@@ -30,12 +30,12 @@ nameForm.addEventListener('submit', (e) => {
     // don't forget to prevent the default form behavior!
     e.preventDefault();
     // get the name data from the form
-
+    
     // set the state to this data from the form
 
     // reset the form values
 
-    displayCurrentGameEl()
+    displayCurrentGameEl();
 });
 
 
