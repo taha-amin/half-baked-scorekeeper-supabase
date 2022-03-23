@@ -73,6 +73,7 @@ finishGameButton.addEventListener('click', async() => {
         score1: score1,
         score2: score2,
     };
+    
     // after creating this new game, re-fetch the games to get the updated state and display them (hint: call displayAllGames())
     await createGame(newGame);
     await displayAllGames();
@@ -121,7 +122,7 @@ function displayCurrentGameEl() {
 async function displayAllGames() {
     // clear out the past games list in the DOM
     pastGamesEl.textContent = '';
-    
+
     // FETCH ALL GAMES from supabase
     const games = await getGames();
 
