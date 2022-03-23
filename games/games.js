@@ -32,9 +32,10 @@ nameForm.addEventListener('submit', (e) => {
     // get the name data from the form
     const data = new FormData(nameForm);
     // set the state to this data from the form
-
+    
     // reset the form values
-
+    nameForm.reset();
+    
     displayCurrentGameEl();
 });
 
